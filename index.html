@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frio em foco</title>
-    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frio em foco</title>
+        <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css"> 
+        <!-- Bootstrap CSS -->
+        <!-- Estava vendo seu link via cnd para pegar o bootstrap e voce estava pegando a versão 5 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-   <img src="/imagens/prefeitura_logo2.png" alt="Logo da Prefeitura de Bragança Paulista">
-</head>
-<body>
+        <!-- Esse é o seu link para usar o o bootstrap versao 5 e ele está certo
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+
+        <!-- nos não colocamos imagens aqui dentro.
+        <img src="imagens/prefeitura_logo2.png" alt="Logo da Prefeitura de Bragança Paulista"> -->
+    </head>
+    <body>
+        <!-- Le outra coisa tenta Indentar mais o codigo ajuda na visualização -->
+        <img src="imagens/prefeitura_logo2.png" alt="Logo da Prefeitura de Bragança Paulista">
+        <header>
+            <div class="header">
+                <h1>Cadastro de Participação</h1> <br>
+            </div>
+        </header>
+        <!-- <br> -->
+        <!-- Pelo que entendi voce estava usando os as tag BR para dar 
+            mais espaço dentro do campos, mais não use BR se voce quiser dar espaço no campo,
+            usa o margin ou padding no elemento que assim ele irá se possionar melhor -->
     
-    <div class="header">
-    <h1>Cadastro de Participação</h1><br>
-    </div>
-    <br>
-    <div class="corpo">
+        <!-- Voce pode usar a tag main para especificar o conteudo principal do seu site,
+        caso estiver mais conteudo imporantes voce pode separar usando varias tag article
+        dentro da main-->
+        <main>
+            <div class="corpo">
+                <h2>Preencha as informações do participante do Concurso</h2>
+            </div>
+            <!-- Descobri porque suas div's não estavam querendo ir para a diretira, 
+                foi porque sua div do formulario estava fechada errada -->
+            <form class="container" action="" novalidate>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="nome" placeholder="Nome">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="nome" placeholder="Nome">
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <!-- Daqui para baixo o seu codigo eu não mexi em nada -->
+
+    <!-- <div class="corpo">
     <h2>Preencha as informações do participante do Concurso</h2>
     <br><br>
 
@@ -31,7 +68,7 @@
         </div>
             <div class="col-6">
                 <input type="date" class="form-control" id="data" placeholder="Data de Nascimento">
-            </div>
+            </div> -->
      <!-- <div class="form-row">
        <div class="col-5">
         <label for="nome">Nome Completo</label> 
@@ -98,6 +135,17 @@
     <!-- <p>Repositório no <i><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox"  -->
         <!-- target="_self">
         Git Hub</a></i> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-</body>
+            
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+            crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+            crossorigin="anonymous"></script>
+    </body>
 </html>
